@@ -1,6 +1,11 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
 void setup(){
    size(600, 600);
 }
+
 void draw(){
   background(252, 237, 237);
   strokeWeight(0.000001);
@@ -35,10 +40,13 @@ void draw(){
   line(395, 425, 485, 320);
   line(485, 320, 500, 380);
   //claw
+  
   strokeWeight(10);
   stroke(232, 140, 140);
-  line(159, 380, 209, 435);
-  line(300, 387, 320, 430);
+  line(300, 387, 320, 430);// middle foot
+  line(159, 380, 209, 435); // back foot
+  
+  //hind leg thigh
   strokeWeight(30);
   stroke(252,252,252);
   line(209, 319, 159, 380);
